@@ -7,7 +7,7 @@ import Card from "./Card";
 export default function page() {
   return (
     <div>
-      <div className=" flex flex-col gap-5  h-screen w-full p-4 ">
+      <div className=" flex flex-col gap-5  h-screen w-full p-3 ">
         {/* head  */}
         <div className=" flex justify-between items-center w-full">
           <div className="  rounded-full  h-fit text-3xl ">
@@ -23,19 +23,18 @@ export default function page() {
         <div className=" py-2 w-full flex justify-between items-center">
           <div className="flex flex-col gap-1">
             <div className=" text-[#878787] font-medium text-sm">
-              Delivery Location
+              Dining Location
             </div>
-            <div className=" font-semibold text-base">Home</div>
+            <div className=" font-semibold text-base">Dine-in</div>
           </div>
-          <div className="cursor-pointer border  text-[#FE8C00] font-bold text-base rounded-3xl p-2 hover:bg-[#FE8C00] hover:text-white">
+          <div className="cursor-pointer border  text-red-700 font-bold text-base rounded-3xl p-2 hover:bg-red-700 hover:text-white">
             Change location
           </div>
         </div>
 
-        {/* promo  */}
         <div className=" px-3 py-2 rounded-3xl border border-[#EDEDED] w-full flex justify-between items-center">
           <div>
-            <TbRosetteDiscountFilled className=" text-[#FE8C00] text-3xl" />
+            <TbRosetteDiscountFilled className=" text-red-700 text-3xl" />
           </div>
           <div>
             <input
@@ -44,7 +43,7 @@ export default function page() {
               placeholder="Promo Code"
             />
           </div>
-          <div className="cursor-pointer bg-[#FE8C00] text-white font-bold text-base rounded-3xl px-4 p-2 hover:bg-white hover:text-[#FE8C00] border hover:border-[#FE8C00]">
+          <div className="cursor-pointer bg-red-700 text-white font-bold text-base rounded-3xl px-4 p-2 hover:bg-white hover:text-red-700 border hover:border-red-700">
             Apply
           </div>
         </div>
@@ -87,7 +86,7 @@ export default function page() {
             <div className=" font-medium text-base text-[#878787]">
               Discount
             </div>
-            <div className=" font-bold text-base text-[#FE8C00]">-$5</div>
+            <div className=" font-bold text-base text-red-700">-$5</div>
           </div>
           <div className=" flex justify-between w-full ">
             <div className=" font-medium text-base text-[#878787]">Total</div>
@@ -96,7 +95,7 @@ export default function page() {
         </div>
 
         <div className="">
-          <div className="w-full flex justify-center cursor-pointer bg-[#FE8C00] text-white font-bold text-2xl rounded-4xl p-4 hover:bg-white hover:text-[#FE8C00] border hover:border-[#FE8C00]">
+          <div className="w-full flex justify-center cursor-pointer bg-red-700 text-white font-bold text-2xl rounded-4xl p-4 hover:bg-white hover:text-red-700 border hover:border-red-700">
             Order Now
           </div>
         </div>

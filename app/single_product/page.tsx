@@ -1,14 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { CiCircleChevLeft, CiHeart, CiClock2 } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
 import { FiDollarSign } from "react-icons/fi";
 import { IoCartOutline } from "react-icons/io5";
 
 export default function page() {
+  const [quantity, setQuantity] = useState(2);
+  const price = 12230;
+
+  const increase = () => setQuantity((prev) => prev + 1);
+  const decrease = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+
   return (
     <div>
       <div className=" flex flex-col gap-4  h-screen w-full p-3 ">
-        {/* top part */}
         <div className="h-[40%] text-3xl text-white bg-[url('/burger.jpg')] bg-cover bg-no-repeat  bg-center p-5 rounded-2xl w-full flex justify-between">
           <div>
             <CiCircleChevLeft className="" />
@@ -24,7 +31,7 @@ export default function page() {
         <div className="  flex flex-col gap-2 px-3 pb-5 border-b-2 border-[#EDEDED]">
           <div className=" flex flex-col gap-2 ">
             <div className="  font-semibold text-3xl">Burger With Meat</div>
-            <div className=" text-[#FE8C00] font-bold text-xl">$12,230</div>
+            <div className=" text-[#FE8C00] font-bold text-xl">${price.toLocaleString()}</div>
           </div>
           <div className=" text-[#878787] text-base font-normal flex justify-between gap-2 p-2 bg-[#FE8C000A] rounded-lg">
             <div className="flex gap-2 items-center">
@@ -52,19 +59,20 @@ export default function page() {
           </div>
         </div>
 
-        {/* add to cart  */}
         <div className=" flex flex-col gap-4 py-5">
-          <div className="flex px-3 justify-between items-center w-full ">
-            <div className=" flex gap-7 text-2xl font-bold ">
-              <div className="">-</div>
-              <div>2</div>
-              <div className="">+</div>
+          <div className="flex px-3 justify-between text-center  w-full items-center ">
+            <div className=" flex gap-7 text-lg items-center font-bold ">
+              <div className="cursor-pointer" onClick={decrease}>-</div>
+              <div className=" ">{quantity}</div>
+              <div className="cursor-pointer" onClick={increase}>+</div>
             </div>
-            <div className="text-[#FE8C00] font-bold text-3xl">$24,460</div>
+            <div className="text-[#FE8C00] font-bold text-3xl">
+              ${(price * quantity).toLocaleString()}
+            </div>
           </div>
           <div className="flex gap-2 items-center">
             <div className=" flex justify-center items-center gap-3 font-medium text-xl bg-[#FE8C00] text-white rounded-3xl p-4 w-full">
-            <IoCartOutline /> Add To Cart
+              <IoCartOutline /> Add To Cart
             </div>
           </div>
         </div>
