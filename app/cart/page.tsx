@@ -3,8 +3,15 @@ import { CiCircleChevLeft } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { TbRosetteDiscountFilled } from "react-icons/tb";
 import Card from "./Card";
+import { menuItems } from "@/api/db";
 
 export default function page() {
+  console.log("menuItems", menuItems);
+
+  const stews = menuItems.filter((item) => item.type === "stews");
+  const proteins = menuItems.filter((item) => item.type === "proteins");
+  const allItems = [...stews, ...proteins];
+
   return (
     <div>
       <div className=" flex flex-col gap-5  h-screen w-full p-3 ">
