@@ -77,26 +77,28 @@ const params = useParams();
 
   return (
     <div className="flex flex-col gap-4 h-full w-full p-3">
-      <div
-        className="h-[40vh] text-3xl font-bold text-white bg-cover object-center bg-no-repeat bg-center p-5 rounded-2xl w-full flex justify-between"
-        style={{ backgroundImage: `url(${product.image})` }}
-      >
-        <Link href="/menu">
-          <CiCircleChevLeft size={30} />
+      <div className="w-full flex justify-between items-center text-xl font-bold text-black pb-3 ">
+      <Link href="/menu">
+          <CiCircleChevLeft size={35}  />
         </Link>
         <div className="text-xl font-semibold">About This Menu</div>
-        <div className="outline rounded-full h-fit text-xl p-1">
-          <CiHeart />
+        <div className="outline rounded-full  text-center flex items-center p-1">
+          <CiHeart  className=" " />
         </div>
+        </div>
+      <div
+        className="h-[40vh]  bg-cover  bg-no-repeat bg-center  rounded-2xl "
+        style={{ backgroundImage: `url(${product.image})` }}
+      >
       </div>
 
       <div className="flex flex-col gap-2 px-3 pb-5 border-b-2 border-[#EDEDED]">
         <div className="font-semibold text-3xl">{product.name}</div>
         <div className="text-red-700 font-bold text-xl">${product.price}</div>
         <div className="text-[#878787] text-base font-normal flex justify-between gap-2 p-2 bg-[#FE8C000A] rounded-lg">
-          <div className="flex gap-2 items-center">
+          {/* <div className="flex gap-2 items-center">
             <FiDollarSign className="text-red-700" />
-          </div>
+          </div> */}
           <div className="flex gap-2 items-center">
             <CiClock2 className="text-red-700" /> 20-30mins
           </div>

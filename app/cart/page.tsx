@@ -40,9 +40,9 @@ export default function Page() {
     <div className="flex flex-col gap-5 h-screen w-full p-3">
       {/* Head */}
       <div className="flex justify-between items-center w-full">
-        <CiCircleChevLeft onClick={() => router.back()}className="text-3xl rounded-full h-fit" />
+        <CiCircleChevLeft size={30} onClick={() => router.back()}className="text-center rounded-full" />
         <div>My Cart</div>
-        <BsThreeDots className="text-lg rounded-full h-fit p-1 border" />
+        <BsThreeDots size={30} className="text-lg rounded-full text-center p-1 border" />
       </div>
 
       {/* Top Part */}
@@ -108,7 +108,7 @@ export default function Page() {
       </div>
 
       {/* Order Button */}
-      <div className="w-full flex justify-center cursor-pointer bg-red-700 text-white font-bold text-2xl rounded-4xl p-4 hover:bg-white hover:text-red-700 border hover:border-red-700">
+      <div className="w-full flex justify-center cursor-pointer bg-red-700 text-white font-bold text-2xl rounded-4xl py-2 md:p-4 hover:bg-white hover:text-red-700 border hover:border-red-700">
         Order Now
       </div>
     </div>
