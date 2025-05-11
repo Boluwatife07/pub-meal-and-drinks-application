@@ -7,21 +7,24 @@ import { FiDollarSign } from "react-icons/fi";
 import { IoCartOutline } from "react-icons/io5";
 import Link from "next/link";
 import Bottomnav from "@/app/components/bottomnav";
+import { useParams } from "next/navigation";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
 
-export default function SingleProductPage({ params }: Props) {
+// type Props = {
+//   params: {
+//     id: string;
+//   };
+// };
+
+export default function SingleProductPage({  }) {
   const [cart, setCart] = useState<any[]>([]);
   const [quantity, setQuantity] = useState(1); // Default quantity is 1
   const [notification, setNotification] = useState<string | null>(null); // Notification state
 
   // Find the product based on the id in params
-  const product = menuItems.find((item) => item.id === params.id);
-
+const params = useParams();
+  const id = params?.id as string;
+    const product = menuItems.find(item => item.id === id);
   useEffect(() => {
     // Retrieve the cart from localStorage when the component mounts
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
