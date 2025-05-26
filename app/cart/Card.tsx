@@ -20,7 +20,6 @@ export default function Card({ p_name, p_price, p_image, quantity, onDelete, onQ
 
   return (
     <div className="rounded-lg flex gap-3 p-3 items-center border border-gray-100 h-full">
-      <input type="checkbox" className="h-5 w-5" />
 
       <div className="grid grid-cols-3 w-full">
         {/* Left side: Image and product info */}

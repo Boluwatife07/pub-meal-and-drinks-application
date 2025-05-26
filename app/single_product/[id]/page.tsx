@@ -94,7 +94,7 @@ const params = useParams();
 
       <div className="flex flex-col gap-2 px-3 pb-5 border-b-2 border-[#EDEDED]">
         <div className="font-semibold text-3xl">{product.name}</div>
-        <div className="text-red-700 font-bold text-xl">${product.price}</div>
+        <div className="text-red-700 font-bold text-xl">#{product.price}</div>
         <div className="text-[#878787] text-base font-normal flex justify-between gap-2 p-2 bg-[#FE8C000A] rounded-lg">
           {/* <div className="flex gap-2 items-center">
             <FiDollarSign className="text-red-700" />

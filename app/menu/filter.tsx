@@ -6,8 +6,6 @@ const icon = [
   { img: "/drinks.png", name: "Drink" },
   { img: "/proteins.png", name: "Proteins" },
  { img: "/snacks.png", name: "snacks" }
-
-
 ];
 
 export default function Filter({ selectedType, onSelect }) {
@@ -33,7 +31,7 @@ export default function Filter({ selectedType, onSelect }) {
           <div
             onClick={() => handleSelect(item.name)}
             className={`group flex flex-col gap-2 items-center px-2 py-1 rounded-xl cursor-pointer transition-all ease-in-out duration-200 ${
-              selectedType === item.name ? "bg-red-700 text-white" : "hover:bg-red-700"
+              selectedType === item.name ? " grayscale-50" : " hover:grayscale-75"
             }`}
           >
             <div>
@@ -41,7 +39,7 @@ export default function Filter({ selectedType, onSelect }) {
             </div>
             <div
               className={`text-sm md:text-lg font-medium capitalize transition-all ease-in-out ${
-                selectedType === item.name ? "text-white" : "text-gray-500 group-hover:text-white"
+                selectedType === item.name ? "" : "text-gray-500 "
               }`}
             >
               {item.name}
