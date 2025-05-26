@@ -9,7 +9,7 @@ interface MenuItem {
 }
 
 export const menuItems: MenuItem[] = [
-  { id: "1", name: "Jollof Rice", type: "Main", image: "/foods/maindishes/jollofrice.jpeg", description: "Spiced tomato-based rice dish, popular across West Africa.", rating: 4.5, price: 12.99 },
+  { id: "1", name: "Jollof Rice", type: "Main", image: "/foods/maindishes/jollof.jpg", description: "Spiced tomato-based rice dish, popular across West Africa.", rating: 4.5, price: 12.99 },
   { id: "2", name: "Fried Rice", type: "Main", image: "/foods/maindishes/friedrice.jpg", description: "Savory stir-fried rice with mixed vegetables.", rating: 4.2, price: 10.99 },
 
   
