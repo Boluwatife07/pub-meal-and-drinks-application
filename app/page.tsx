@@ -5,7 +5,7 @@ import { ImSpoonKnife } from 'react-icons/im';
 export default function Page() {
   return (
     <div>
-      <div className="bg-white h-screen">
+      <div className=" h-screen">
         <div className="flex h-full justify-center items-center">
           <div className="grid grid-cols-2 gap-10">
             <a

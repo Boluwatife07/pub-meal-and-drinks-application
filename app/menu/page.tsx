@@ -11,7 +11,7 @@ export default function Page() {
 
  
   return (
-    <div className="bg-white">
+    <div className="">
       <div className="relative min-h-[200px]">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/header.png')] bg-cover bg-no-repeat bg-center p-5">
           <div className="flex justify-end gap-5  text-white">
